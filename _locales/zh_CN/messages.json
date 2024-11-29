@@ -1,0 +1,11 @@
+{
+  "extensionName": {
+    "message": "69shu Helper"
+  },
+  "extensionDescription": {
+    "message": "69shu test"
+  },
+  "toggleDisplayDescription": {
+    "message": "切换浮动容器的显示/隐藏"
+  }
+}

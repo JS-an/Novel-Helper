@@ -1,0 +1,48 @@
+{
+  "manifest_version": 3,
+  "name": "69shu Helper",
+  "version": "1.4",
+  "description": "69shu Helper",
+  "default_locale": "zh_CN",
+  "permissions": [
+    "scripting",
+    "activeTab",
+    "tabs",
+    "webNavigation",
+    "notifications"
+  ],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "toggle-display": {
+      "suggested_key": {
+        "default": "Ctrl+Q",
+        "mac": "Command+Shift+Q"
+      },
+      "description": "切换浮动容器的显示/隐藏"
+    }
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["template.html"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

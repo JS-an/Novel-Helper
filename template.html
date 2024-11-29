@@ -1,0 +1,115 @@
+<!-- template.html -->
+
+<div id="my-floating-txtnav-page1">
+  <style>
+    /* 容器样式 */
+    #my-floating-txtnav-page1 {
+      overflow: auto;
+      height: calc(100% - 20px);
+      background-color: #00000022;
+      border-radius: 8px;
+      padding: 10px;
+      font-family: Arial, sans-serif;
+      color: #88888888;
+    }
+
+    /* 关闭按钮样式 */
+    #my-close-button {
+      padding: 2px 5px;
+      margin-right: 5px;
+      cursor: pointer;
+      border: none;
+      background-color: #00000022;
+      color: #88888888;
+    }
+
+    /* URL输入框和按钮容器 */
+    #my-url-container {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+    }
+
+    /* 输入框样式 */
+    #my-url-input {
+      flex: 1;
+      padding: 5px;
+      margin-right: 5px;
+      background-color: #00000022 !important;
+      color: #88888888 !important;
+      border: none;
+    }
+
+    #my-url-input:focus {
+      outline: none;
+      border: none;
+    }
+
+    /* 按钮样式 */
+    #my-load-button {
+      padding: 5px 10px;
+      cursor: pointer;
+      background-color: #00000022;
+      color: #88888888;
+      border: none;
+    }
+
+    /* 内容区域样式 */
+    #my-content-area {
+      color: #88888888;
+    }
+
+    /* 内容区域样式 */
+    #my-content-area p {
+      margin: 10px 0;
+    }
+
+    /* 链接样式 */
+    #my-content-area a {
+      color: #3498db55;
+      text-decoration: underline;
+    }
+
+    #my-content-area a:hover {
+      color: #1d6fa555;
+    }
+
+    /* 针对整个滚动条 */
+    #my-floating-txtnav-page1::-webkit-scrollbar {
+      width: 10px;
+      /* 设置滚动条的宽度 */
+      height: 10px;
+      /* 设置滚动条的高度（用于水平滚动条） */
+    }
+
+    /* 滚动条轨道 */
+    #my-floating-txtnav-page1::-webkit-scrollbar-track {
+      background: transparent;
+      /* 设置轨道的背景色 */
+      border-radius: 10px;
+      /* 设置轨道的圆角 */
+    }
+
+    /* 滚动条滑块 */
+    #my-floating-txtnav-page1::-webkit-scrollbar-thumb {
+      background: #88888888;
+      /* 设置滑块的背景色 */
+      border-radius: 10px;
+      /* 设置滑块的圆角 */
+    }
+
+    /* 滚动条滑块在悬停时 */
+    #my-floating-txtnav-page1::-webkit-scrollbar-thumb:hover {
+      background: #55555555;
+      /* 设置滑块在悬停时的背景色 */
+    }
+  </style>
+
+  <div id="my-url-container">
+    <button id="my-close-button">X</button>
+    <input id="my-url-input" type="text" placeholder="url" />
+    <button id="my-load-button">Q</button>
+  </div>
+  <div id="my-content-area"></div>
+</div>

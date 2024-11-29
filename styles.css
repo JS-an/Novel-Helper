@@ -1,0 +1,33 @@
+/* styles.css */
+
+/* 浮动容器的基础样式已经通过 Shadow DOM 的模板定义，这里可添加额外的样式 */
+
+/* 例如，加载动画样式 */
+.loader-container {
+  display: flex;
+  align-items: center;
+}
+
+.loader {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  animation: spin 2s linear infinite;
+  margin-right: 10px;
+}
+
+.error {
+  color: red;
+}
+
+/* 关键帧动画 */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
