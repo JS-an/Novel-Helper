@@ -51,13 +51,19 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
       .then(buffer => {
         let decodedText;
         try {
-          // 使用 TextDecoder 解码 GBK 编码的内容
-          const decoder = new TextDecoder('gbk'); // 'windows-936' 对应 GBK
-          decodedText = decoder.decode(buffer);
-          return decodedText;
+          if (url.includes('69shuba.cx')) {
+            // 使用 TextDecoder 解码 GBK 编码的内容
+            const decoder = new TextDecoder('gbk');
+            decodedText = decoder.decode(buffer);
+            return decodedText;
+          } else {
+            // 使用 TextDecoder 解码 UTF-8 编码的内容
+            const decoder = new TextDecoder('utf-8');
+            decodedText = decoder.decode(buffer);
+            return decodedText;
+          }
         } catch (error) {
-          console.error('TextDecoder 不支持 windows-936 编码:', error);
-          sendResponse({ success: false, error: '不支持的编码类型。' });
+          sendResponse({ success: false, error });
           return;
         }
       })
